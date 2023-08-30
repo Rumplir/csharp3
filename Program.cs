@@ -18,14 +18,15 @@ namespace S10EP01
                 Console.Write("Outsourced (y/n)? ");
                 string yn = Console.ReadLine();
 
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Hours: ");
+                int hours = int.Parse(Console.ReadLine());
+                Console.Write("Value per Hour: ");
+                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
                 if (yn == "y" || yn == "Y")
                 {
-                    Console.Write("Name: ");
-                    string name = Console.ReadLine();
-                    Console.Write("Hours: ");
-                    int hours = int.Parse(Console.ReadLine());
-                    Console.Write("Value per Hour: ");
-                    double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Console.Write("Additional charge: ");
                     double additional = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
@@ -33,17 +34,8 @@ namespace S10EP01
                 }
                 else
                 {
-                    Console.Write("Name: ");
-                    string name = Console.ReadLine();
-                    Console.Write("Hours: ");
-                    int hours = int.Parse(Console.ReadLine());
-                    Console.Write("Value per Hour: ");
-                    double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
                     list.Add(new Employee(name, hours, valuePerHour));
-
                 }
-
             }
 
             Console.WriteLine("PAYMENTS: ");
